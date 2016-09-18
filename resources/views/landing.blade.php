@@ -80,8 +80,14 @@
 
 					<div class="input-group">
 						{!! Form::text('content', null, ['placeholder' => 'Description...', 'class' => 'form-control']) !!}
-						{!! Form::number('story_points', 0, ['placeholder' => 'Story Points', 'class' => 'form-control', 'min' => '0', 'max' => '9']) !!}
-						{!! Form::number('business_value', 0, ['placeholder' => 'Business Value', 'class' => 'form-control', 'min' => '0', 'max' => '9']) !!}
+						<div>
+							{!! Form::label('Story Points: ') !!}
+							{!! Form::number('story_points', 0, ['placeholder' => 'Story Points', 'class' => 'form-control', 'min' => '0', 'max' => '9']) !!}
+						</div>
+						<div>
+							{!! Form::label('Business Value: ') !!}
+							{!! Form::number('business_value', 0, ['placeholder' => 'Business Value', 'class' => 'form-control', 'min' => '0', 'max' => '9']) !!}
+						</div>
 					</div>
 
       </div>
