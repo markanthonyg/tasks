@@ -7,7 +7,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>EMRS Tasks</title>
+	<title>EMRS Backlog</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
 	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
@@ -47,17 +47,17 @@
 
 	<div id="fh5co-offcanvass">
 		<a href="#" class="fh5co-offcanvass-close js-fh5co-offcanvass-close">Menu <i class="icon-cross"></i> </a>
-		<h1 class="fh5co-logo"><a class="navbar-brand" href="#">EMRS Tasks</a></h1>
+		<h1 class="fh5co-logo"><a class="navbar-brand" href="#">EMRS Backlog</a></h1>
 	</div>
 	<header id="fh5co-header" role="banner">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
 					<a href="#" class="fh5co-menu-btn js-fh5co-menu-btn">Menu <i class="icon-menu"></i></a>
-					<a class="navbar-brand" href="#">EMRS Tasks</a>
+					<a class="navbar-brand" href="#">EMRS Backlog</a>
 					<br/>
 					<button class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
-				    New Task
+				    New Task <span class="badge">{{$tasks->count()}}</span>
 					</button>
 				</div>
 			</div>
@@ -111,7 +111,7 @@
 								<div class="animate-box">
 									<a href="{{asset('images/num'.$task->business_value.'.png')}}" class="image-popup fh5co-board-img" title="{{$task->content}}"><img src="{{asset('images/num'.$task->business_value.'.png')}}" alt="Free HTML5 Bootstrap template"></a>
 								</div>
-								<div class="fh5co-desc">{{$task->content}}<br/>Story Points: {{$task->story_points}}<br/>Business Value: {{$task->business_value}}</div>
+								<div class="fh5co-desc"><strong>{{$task->content}}</strong><br/><div class="alert alert-success" role="alert">Story Points: {{$task->story_points}}</div><br/><div class="alert alert-warning" role="alert">Business Value: {{$task->business_value}}</div></div>
 							</div>
 						@endforeach
 					@endif
