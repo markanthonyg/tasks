@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('landing');
-});
+
+Route::get('/', 'HomeController@showTasks');
+Route::post('/', 'HomeController@storeTask');
