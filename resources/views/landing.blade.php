@@ -111,7 +111,7 @@
 								<div class="animate-box">
 									<a href="{{asset('images/num'.$task->business_value.'.png')}}" class="image-popup fh5co-board-img" title="{{$task->content}}"><img src="{{asset('images/num'.$task->business_value.'.png')}}" alt="Free HTML5 Bootstrap template"></a>
 								</div>
-								<div class="fh5co-desc"><strong>{{$task->content}}</strong><br/><div class="alert alert-success" role="alert">Story Points: {{$task->story_points}}</div><br/><div class="alert alert-warning" role="alert">Business Value: {{$task->business_value}}</div></div>
+								<div class="fh5co-desc"><strong>{{$task->content}}</strong><br/><div class="alert alert-success" role="alert">Story Points: {{$task->story_points}}</div><div class="alert alert-warning" role="alert">Business Value: {{$task->business_value}}</div></div>
 							</div>
 						@endforeach
 					@endif
