@@ -112,7 +112,7 @@
 						@foreach ($tasks as $task)
 							<div class="item">
 								<div class="animate-box">
-									<a href="{{asset('images/num'.$task->business_value.'.png')}}" class="image-popup fh5co-board-img" title="{{$task->content}}"><img src="{{asset('images/num'.$task->business_value.'.png')}}" alt="Free HTML5 Bootstrap template"></a>
+									<a href="{{asset('images/num'.$task->business_value.'.png')}}" class="image-popup fh5co-board-img" title="{{$task->content}}"><img src="{{asset('images/num'.$task->business_value.'.png')}}" alt="{{'Image would show a big number: '.$task->business_value}}"></a>
 								</div>
 								<div class="fh5co-desc"><strong>{{$task->content}}</strong><br/><span class="label label-success">Story Points: {{$task->story_points}}</span><br/><span class="label label-info">BV: {{$task->business_value}}</span></div>
 							</div>
